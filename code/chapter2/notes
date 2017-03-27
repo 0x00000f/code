@@ -1,0 +1,49 @@
+
+
+
+INHERITANCE 2.2.1
+
+Protected::
+a protect member is "public" to all classes derived from this one, but private to all other functions.
+
+
+Constructors and Destructors::
+-When a Derived class is constructed, the constructor is constructed bottom up: base class first, them members, then derived class.
+
+-Classes are destroyed in reverse order from their construction, derived classes are destroyed before base classes.
+
+
+Static binding vs dynamic binding::
+Static binding: when determining which member function to call, C++'s default action is to consider an object's DECLARED TYPE, not its actual type. 
+Dynamic binding: an object's contents determine which member function is called. To specify that a member function should use dynamic binding, the keyword "virtual" is added to the function's declaration.
+
+Virtual::
+A virtual function allows derived classes to replace the implementation provided by the base class.
+
+Virtual Destructor:::
+There is no such thing as a virtual constructor. However, if a base class difines anyvirtual functions, it should define a virtual destructor, even if its empty.
+
+
+
+POLYMORPHISM 2.2.2
+definition: In OOD, it refers to the ability of a variable to take different types. Alternatively: Dealing with many types
+
+2 primary ways of using inheritance: Specialization and Extension. 
+Specialization: we are specializing a general class to a particular derived class. This derived class posesses an "is-a" relationship to their base class. The derived classes inherit all the members of the base class. For each inherited function, if that function operates correctly, independent of whether it is operating for a specilization, no additional work is needed. However, if a general function of the base would nowork correctly on the derived class, then we have to override the function for the derived class to function correctly.
+
+Specialization example:
+For example, we could have a general class, Dog, which has a function drink
+and a function sniff. Specializing this class to a Bloodhound class would probably
+not require that we override the drink function, as all dogs drink pretty much the
+same way. But it could require that we override the sniff function, as a Bloodhound
+has a much more sensitive sense of smell than a “generic” dog. In this way, the
+Bloodhound class specializes the functions of its base class, Dog.
+
+Extension: we reuse the code written for the functions of the base class, but we thenadd new functions that are not present in the base class, so as to extend its functionality. 
+
+Extension example: 
+for example, returning to our Dog class, we might wish to create a derived class, BorderCollie, which inherits all the generic functions of the Dog class, but then adds anew function, herd, since Border Collies have a herding instinct that is not presen
+in generic dogs, thereby extending the functionality of a generic dog.
+
+
+
