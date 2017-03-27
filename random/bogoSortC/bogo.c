@@ -4,7 +4,7 @@
 #include <time.h>
 #include <unistd.h>
 
-#define N 10
+#define N 5
 int M=1;
 
 bool is_sorted(int *a, int n)
@@ -29,8 +29,8 @@ void shuffle(int *a, int n)
 	
 
   //printing out each permuation
-	for (i=0; i < N; i++) printf("%d ", a[i]);
-	printf("\n");
+	//for (i=0; i < N; i++) printf("%d ", a[i]);
+	//printf("\n");
   	//usleep(10000);
 	M++;
 }
