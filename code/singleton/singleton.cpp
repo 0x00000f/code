@@ -1,4 +1,5 @@
  /*
+  * SINGLETON
    exmple of a singleton design pattern.
  * Copyright (C) 2011 Radek Pazdera
  * This program is free software: you can redistribute it and/or modify
